@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/liked-replies",
+      "handler": "liked-replies.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/liked-replies/count",
+      "handler": "liked-replies.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/liked-replies/:id",
+      "handler": "liked-replies.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/liked-replies",
+      "handler": "liked-replies.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/liked-replies/:id",
+      "handler": "liked-replies.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/liked-replies/:id",
+      "handler": "liked-replies.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

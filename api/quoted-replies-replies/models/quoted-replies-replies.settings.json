@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quoted_replies_replies",
+  "info": {
+    "name": "QuotedRepliesReplies",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quoted_reply": {
+      "via": "quoted_replies_replies",
+      "model": "quotes-replies"
+    },
+    "users_id": {
+      "via": "quoted_replies_replies",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tweets",
+  "info": {
+    "name": "Tweets",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tweet": {
+      "type": "text"
+    },
+    "users_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "string"
+    },
+    "likes": {
+      "type": "integer",
+      "default": 0
+    },
+    "retweets": {
+      "type": "integer",
+      "default": 0
+    },
+    "replies_count": {
+      "type": "integer",
+      "default": 0
+    },
+    "retweets_total": {
+      "type": "integer",
+      "default": 0
+    },
+    "quoted_retweets": {
+      "type": "integer",
+      "default": 0
+    },
+    "quotes_replies": {
+      "via": "tweet_id",
+      "collection": "quotes-replies"
+    },
+    "replies": {
+      "via": "tweet",
+      "collection": "replies"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "liked_replies",
+  "info": {
+    "name": "LikedReplies"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "replies": {
+      "collection": "replies"
+    },
+    "users_id": {
+      "via": "liked_replies",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

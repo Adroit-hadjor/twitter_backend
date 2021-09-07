@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "replies",
+  "info": {
+    "name": "Replies",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "users_permissions_user": {
+      "via": "replies",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "tweet": {
+      "via": "replies",
+      "model": "tweets"
+    }
+  }
+}

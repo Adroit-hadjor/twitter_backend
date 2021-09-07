@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "liked_quoted_replies",
+  "info": {
+    "name": "Liked_quoted_replies"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "via": "liked_quoted_replies",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "quoted_replies": {
+      "collection": "quotes-replies"
+    }
+  }
+}

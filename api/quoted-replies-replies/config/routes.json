@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quoted-replies-replies",
+      "handler": "quoted-replies-replies.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quoted-replies-replies/count",
+      "handler": "quoted-replies-replies.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quoted-replies-replies/:id",
+      "handler": "quoted-replies-replies.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quoted-replies-replies",
+      "handler": "quoted-replies-replies.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quoted-replies-replies/:id",
+      "handler": "quoted-replies-replies.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quoted-replies-replies/:id",
+      "handler": "quoted-replies-replies.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

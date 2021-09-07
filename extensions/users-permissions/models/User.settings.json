@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "profile": {
+      "via": "user_id",
+      "model": "profile"
+    },
+    "followers": {
+      "via": "user_id",
+      "collection": "follower"
+    },
+    "user_id": {
+      "via": "follower_id",
+      "model": "follower"
+    },
+    "replies": {
+      "via": "users_permissions_user",
+      "collection": "replies"
+    },
+    "liked_quoted_replies": {
+      "via": "users_permissions_user",
+      "collection": "liked-quoted-replies"
+    },
+    "quoted_replies_replies": {
+      "via": "users_id",
+      "collection": "quoted-replies-replies"
+    },
+    "liked_replies": {
+      "via": "users_id",
+      "collection": "liked-replies"
+    },
+    "liked_quoted_replies_replies": {
+      "via": "users_id",
+      "collection": "liked-quoted-replies-replies"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

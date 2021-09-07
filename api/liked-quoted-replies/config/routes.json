@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/liked-quoted-replies",
+      "handler": "liked-quoted-replies.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/liked-quoted-replies/count",
+      "handler": "liked-quoted-replies.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/liked-quoted-replies/:id",
+      "handler": "liked-quoted-replies.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/liked-quoted-replies",
+      "handler": "liked-quoted-replies.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/liked-quoted-replies/:id",
+      "handler": "liked-quoted-replies.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/liked-quoted-replies/:id",
+      "handler": "liked-quoted-replies.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
